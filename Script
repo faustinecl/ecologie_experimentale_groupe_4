@@ -1,0 +1,1 @@
+df = read.csv( ‘emplacement/ficher.csv, sep=‘,’)
