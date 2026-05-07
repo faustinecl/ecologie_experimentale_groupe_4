@@ -1,1 +1,29 @@
 df = read.csv( ‘emplacement/ficher.csv, sep=‘,’)
+
+library(dplyr)
+library(tidyr)
+library(readxl)
+library(writexl)
+
+# ------ 2. Calcul du réplicat ------
+df <- df %>%
+mutate(replicat = (n_bloc - 1) * 3 + n_repl)
+# ------ 3. Comptage par (condition, réplicat, genre) ------
+df_counts <- df %>%
+group_by(condition, replicat, genre) %>%
+summarise(n = n(), .groups = "drop")
+# ------ 4. Pivot : genres en colonnes ------
+df_wide <- df_counts %>%
+pivot_wider(
+names_from = genre,
+values_from = n,
+values_fill = 0
+)
+
+# ------ 5. Mise en forme finale ------
+# Condition placée en dernière colonne (comme dans le tableau cible)
+df_genre <- df_wide %>%
+arrange(Condition, réplicat) %>%
+relocate(Condition, .after = last_col())
+
+
