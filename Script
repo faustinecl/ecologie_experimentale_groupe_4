@@ -4,15 +4,44 @@ library(dplyr)
 library(tidyr)
 library(readxl)
 library(writexl)
+library(vegan)
+library(ggplot2)
+library(tidyverse)
 
-# ------ 2. Calcul du réplicat ------
+df[df == "Na"] <- NA   # Que les “Na” du tableau Excel soient considérés comme des vrais NA sur R 
+
+unique(df$famille) #voir toutes les entrées dans la colonne famille, cad toutes les familles qu'on a répertoriées
+length(unique(df$famille)) # avoir le nombre total de famille qu'on a échantillonné
+unique(df$genre) #Pareil pour les genres
+length(unique(df$genre))
+summary(df) # Résumé du tableau de données df
+
+#Courbe de saturation des espèces 
+#En x, nombre de sites échantillonnés (effort d’échantillonnage)
+#en y, nombre de genres
+#Plus on a de sites échantillonés, plus on a de genres ou d’espèces, jusqu'à arriver à saturation car on a un nombre fini de genres/espèces par parcelle. On regarde les genres car on a trop de NA pour les espèces qu’on n’a pas réussi à identifier. 
+
+#Créer un tableau df_genre avec en colonne les différents genres et en ligne les conditions échantillons (parcelle)
+#Un tableau pour la condition 1 et un pour la 9. Chaque tableau doit avoir 9 lignes (nombre de parcelles)
+
+
+# ============================================================
+# Logique :
+# - réplicat = (n_bloc - 1) * 3 + n_repl
+# (3 blocs x 3 réplicats = 9 réplicats par condition)
+# - On pivote les genres en colonnes et on compte les individus
+# - La colonne "Condition" reprend la valeur de "condition"
+# ============================================================
+
+
+# ------ Calcul du réplicat ------
 df <- df %>%
 mutate(replicat = (n_bloc - 1) * 3 + n_repl)
-# ------ 3. Comptage par (condition, réplicat, genre) ------
+# ------ Comptage par (condition, réplicat, genre) ------
 df_counts <- df %>%
 group_by(condition, replicat, genre) %>%
 summarise(n = n(), .groups = "drop")
-# ------ 4. Pivot : genres en colonnes ------
+# ------ Pivot : genres en colonnes ------
 df_wide <- df_counts %>%
 pivot_wider(
 names_from = genre,
@@ -20,10 +49,52 @@ values_from = n,
 values_fill = 0
 )
 
-# ------ 5. Mise en forme finale ------
+# ------ Mise en forme finale ------
 # Condition placée en dernière colonne (comme dans le tableau cible)
 df_genre <- df_wide %>%
 arrange(Condition, réplicat) %>%
 relocate(Condition, .after = last_col())
+
+
+#Création du tableau df_genre1 avec que les conditions 1, puis j'enlève la colonne condition pour qu'elle compte pas comme une espèce
+
+
+
+df_genre1 <- df_genre %>%
+  filter(Condition == 1) %>%
+  select(-Condition)
+
+df_genre9<- df_genre %>%
+  filter(Condition == 9) %>%
+  select(-Condition)
+print(df_genre9)
+
+# courbe d'accumulation d'espèces
+courbe1 <- specaccum(df_genre1, method = "random", permutations = 1000)
+courbe9 <- specaccum(df_genre9, method = "random", permutations = 1000)
+
+plot(courbe1,
+     col = "blue",
+     lwd = 2,
+     ci.type = "polygon",
+     ci.col = rgb(0, 0, 1, 0.2),
+     xlab = "Nombre de sites échantillonnés",
+     ylab = "Nombre de genres",
+     main = "Courbe de richesse cumulée",
+     ylim = c(0, max(courbe9$richness) + 2))
+
+plot(courbe9,
+     add = TRUE,
+     col = "red",
+     lwd = 2,
+     ci.type = "polygon",
+     ci.col = rgb(1, 0, 0, 0.2))
+
+legend("bottomright",
+       legend = c("Contrôle", "Non-herbivorie"),
+       col = c("blue", "red"),
+       lwd = 2,
+       bty = "n")
+
 
 
