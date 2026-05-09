@@ -97,4 +97,16 @@ legend("bottomright",
        bty = "n")
 
 
+#Estimer/extrapoler le nombre maximum de genres qu'on aurait pu échantillonner
+#Selon différentes méthodes
 
+specpool(df_genre1)
+specpool(df_genre9)
+
+#Courbes extrapolées d'accumulation des genres : une courbe par méthode
+
+pool1 <- poolaccum(df_genre1)
+pool9 <- poolaccum(df_genre9)
+
+plot(pool1)
+plot(pool9)
