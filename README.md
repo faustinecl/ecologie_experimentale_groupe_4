@@ -16,3 +16,12 @@ Structure du Script :
 - sex-ratio par condition (figure 7)
 - comparaison des stades (figure 8)
 - comparaison des stades par condition (figure 9)
+
+
+
+Script annexe :
+- Simple description
+- Investigation d'un potentiel effet bloc
+- Evaluation de l'impact des deux conditions sur les populations (analyse complète)
+- Sex ratio et impact des conitions sur celui-cu (analyse complète)
+- Ration juvénile adulte et imapact des conditions sur celui-ci (analyse complète)
