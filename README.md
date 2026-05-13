@@ -25,3 +25,5 @@ Script annexe :
 - Evaluation de l'impact des deux conditions sur les populations (analyse complète)
 - Sex ratio et impact des conitions sur celui-cu (analyse complète)
 - Ration juvénile adulte et imapact des conditions sur celui-ci (analyse complète)
+
+Les trois derniers points contiennent l'ensemble de nos analyses pour ces parties et présentent donc des redondances par rapport au script principal. Néanmoins, ce script contient également des résultats non présentés dans le rapport et le script principal dans un soucis de place, de choix et de pertinence des résultats.
