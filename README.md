@@ -14,4 +14,4 @@ Structure du Script :
 - tests de Wilcoxon pour chaque genre
 - sex-ratio général (figure 6)
 - sex-ratio par condition (figure 7)
-- comparaison des stades
+- comparaison des stades (figure 8)
