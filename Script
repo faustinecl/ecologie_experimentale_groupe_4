@@ -1,11 +1,8 @@
 df = read.csv( ‘emplacement/Data.csv, sep=‘,’)
 
-library(dplyr)
-library(tidyr)
 library(readxl)
 library(writexl)
 library(vegan)
-library(ggplot2)
 library(tidyverse)
 library(unmarked)
 library(AICcmodavg)
