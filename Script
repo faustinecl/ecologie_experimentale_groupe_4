@@ -270,47 +270,55 @@ plot(pool9)
 ##########################################################################
 
 # ------------- Shannon total : -----------
-# abondance en prenant en compte toutes les parcelles contrôle ou herbivorie :
+
+# abondance en prenant en compte toutes les parcelles contrôle ou herbivorie confondues :
 # on créé des tableaux d'abondance pour la fonction diversity
+
 abondance_controle = as.data.frame(table(df$genre[df$condition==1])) # contrôle
 colnames(abondance_controle) = c("genre", "effectif")
 abondance_sans_herbivorie = as.data.frame(table(df$genre[df$condition==9])) # herbivorie
 colnames(abondance_sans_herbivorie) = c("genre", "effectif")
+
 # on calcule l'indice de Shannon avec la fonction diversity :
+
 Shannon_control = diversity(abondance_controle[2], index = "shannon", equalize.groups =
-FALSE, base=exp(1))
+                              FALSE, base=exp(1))
 Shannon_control
+
 Shannon_sans_herbivorie = diversity(abondance_sans_herbivorie[2], index = "shannon",
-equalize.groups = FALSE, base=exp(1))
+                                    equalize.groups = FALSE, base=exp(1))
 Shannon_sans_herbivorie
+
 # ----------- Shannon par parcelles ----------
 # abondance par parcelles (contrôle ou sans herbivorie), puis shannon est calculé pour
-chacune des parcelles et moyenné dans les cas sans herbivorie ou contrôle
+# chacune des parcelles et moyenné dans les cas sans herbivorie ou contrôle
 L_shannon=c() # on créé une liste de shannon vide qui va venir acceuillir les valeurs de
-shannon
+              # shannon
 # cette boucle calcule les indices de shannon pour chaque parcelle échantillonnée pour les
-conditions contrôle et sans herbivorie :
-for (i in c(1,9)){
-for (j in c(1,2,3)){
-for (k in c(1,2,3)){
-A = table(df$genre[df$condition==i & df$n_bloc==j & df$n_repl==k])
-A = data.frame(A)
-shannon=diversity(A[2], index = "shannon", equalize.groups = FALSE, base=exp(1))
-L_shannon=c(L_shannon,shannon) # les 9 premières valeurs correspondent à la condition
-contrôle, puis les 9 d'après à celle sans herbivorie
+# conditions contrôle et sans herbivorie :
+  for (i in c(1,9)){
+    for (j in c(1,2,3)){
+      for (k in c(1,2,3)){
+        A = table(df$genre[df$condition==i & df$n_bloc==j & df$n_repl==k])
+        A = data.frame(A)
+        shannon=diversity(A[2], index = "shannon", equalize.groups = FALSE, base=exp(1))
+        L_shannon=c(L_shannon,shannon)  # les 9 premières valeurs correspondent à la condition
+                                        # contrôle, puis les 9 d'après à celle sans herbivorie
 }
 }
 }
+
 # dataframe contenant les valeurs des indices de shannon :
+
 df_shannon = data.frame(L_shannon[1:9],L_shannon[10:18])
 colnames(df_shannon)=c("contrôle","sans herbivorie")
 
 # Test de wilcoxon - hypothèse vérifiée, les deux échantillons ne sont pas appariés et le test
-est bilatéral
+# Test bilatéral
+
 wilcox.test(x=df_shannon$`contrôle`,y=df_shannon$`sans herbivorie`,paired = FALSE,
 alternative="two.sided")
-Lmoy=c(mean(L_shannon[1:9]),mean(L_shannon[10:18])) # vecteur des moyennes contrôle et
-sans herbivorie
+Lmoy=c(mean(L_shannon[1:9]),mean(L_shannon[10:18])) # vecteur des moyennes contrôle et sans herbivorie
 
 ##########################################################################
 # test de Fisher d'indépendance entre genre et condition
