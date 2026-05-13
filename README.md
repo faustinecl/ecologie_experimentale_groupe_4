@@ -15,3 +15,4 @@ Structure du Script :
 - sex-ratio général (figure 6)
 - sex-ratio par condition (figure 7)
 - comparaison des stades (figure 8)
+- comparaison des stades par condition (figure 9)
