@@ -201,6 +201,7 @@ relocate(Condition, .after = last_col())
 df_genre1 <- df_genre %>%
   filter(Condition == 1) %>%
   select(-Condition)
+print(df_genre1)
 
 # Condition non-herbivorie
 # Création du tableau df_genre9 avec que les conditions 9, puis suppression de la colonne condition pour qu'elle ne compte pas comme une espèce :
