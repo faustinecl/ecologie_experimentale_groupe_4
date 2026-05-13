@@ -290,8 +290,10 @@ Shannon_sans_herbivorie = diversity(abondance_sans_herbivorie[2], index = "shann
 Shannon_sans_herbivorie
 
 # ----------- Shannon par parcelles ----------
+
 # abondance par parcelles (contrôle ou sans herbivorie), puis shannon est calculé pour
 # chacune des parcelles et moyenné dans les cas sans herbivorie ou contrôle
+
 L_shannon=c() # on créé une liste de shannon vide qui va venir acceuillir les valeurs de
               # shannon
 # cette boucle calcule les indices de shannon pour chaque parcelle échantillonnée pour les
