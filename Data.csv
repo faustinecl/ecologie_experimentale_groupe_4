@@ -1,0 +1,400 @@
+condition,n_bloc,n_repl,n_indiv,sexe,stade,ind_constr,famille,genre,espece,commentaire,date,heure,meteo
+1,1,1,1,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,12h00,pluie_legere
+1,1,1,2,F,A,I,lycosidae,Pardosa,Na,Na,46146,12h00,pluie_legere
+1,1,1,3,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,12h00,pluie_legere
+1,1,1,4,F,J,I,araneidae,Mangora,Mangora acalypha,Na,46146,12h00,pluie_legere
+1,1,1,5,F,A,I,lycosidae,Pardosa,Na,Na,46146,12h00,pluie_legere
+1,1,1,6,F,J,I,salticidae,Evarcha,Na,Na,46146,12h00,pluie_legere
+1,1,1,7,F,J,I,salticidae,Evarcha,Na,Na,46146,12h00,pluie_legere
+1,1,1,8,F,A,I,lycosidae,Trochosa,Na,Na,46146,12h00,pluie_legere
+1,1,1,9,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,12h00,pluie_legere
+1,1,1,10,F,A,I,miturgidae,Zora,Na,Na,46146,12h00,pluie_legere
+1,1,1,11,M,J,I,araneidae,Mangora,Mangora acalypha,Na,46146,12h00,pluie_legere
+1,1,1,12,F,A,I,salticidae,Evarcha,Evarcha falcata,espece_pas_sur,46146,12h00,pluie_legere
+1,1,1,13,F,A,I,linyphiidae,Na,Na,Na,46146,12h00,pluie_legere
+1,1,1,14,F,A,I,theridiidae,Na,Na,Na,46146,12h00,pluie_legere
+1,1,1,15,M,A,I,theridiidae,Enoplognatha,Na,genre_pas_sur,46146,12h00,pluie_legere
+1,1,1,16,M,A,I,theridiidae,Na,Na,Na,46146,12h00,pluie_legere
+1,1,1,17,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,12h00,pluie_legere
+1,1,1,18,M,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,12h00,pluie_legere
+1,3,1,1,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,avec_cocon,46146,12h00,pluie_legere
+1,3,1,2,F,A,I,salticidae,Evarcha,Na,Na,46146,14h30,pluie_legere
+1,3,1,3,Na,Na,C,atypidae,Atypus,Na,chaussette,46146,14h30,pluie_legere
+1,3,1,4,M,A,I,miturgidae,Zora,Na,Na,46146,14h30,pluie_legere
+1,3,1,5,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,14h30,pluie_legere
+1,3,1,6,M,A,I,Na,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,7,F,J,I,araneidae,Araniella,Na,genre_pas_sur,46146,14h30,pluie_legere
+1,3,1,8,F,J,I,lycosidae,Alopecosa,Na,Na,46146,14h30,pluie_legere
+1,3,1,9,F,A,I,lycosidae,Pardosa,Na,Na,46146,14h30,pluie_legere
+1,3,1,10,F,A,I,linyphiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,11,F,A,I,theridiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,12,Na,Na,C,linyphiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,13,F,A,I,gnaphosidae,Drassodes,Na,genre_pas_sur,46146,14h30,pluie_legere
+1,3,1,14,F,A,I,linyphiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,15,M,A,I,araneidae,Mangora,Na,Na,46146,14h30,pluie_legere
+1,3,1,16,M,A,I,cheiracanthiidae,Cheiracanthium,Na,Na,46146,14h30,pluie_legere
+1,3,1,17,F,A,I,theridiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,18,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,14h30,pluie_legere
+1,3,1,19,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,14h30,pluie_legere
+1,3,1,20,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,14h30,pluie_legere
+1,3,1,21,M,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,14h30,pluie_legere
+1,3,1,22,Na,Na,C,atypidae,Atypus,Na,Na,46146,14h30,pluie_legere
+1,3,1,23,F,J,I,theridiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,3,1,24,F,A,I,linyphiidae,Na,Na,Na,46146,14h30,pluie_legere
+1,2,1,1,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,15h00,pluie_legere
+1,2,1,2,F,A,I,salticidae,Evarcha,Na,Na,46146,15h00,pluie_legere
+1,2,1,3,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,15h00,pluie_legere
+1,2,1,4,M,A,I,linyphiidae,Na,Na,Na,46146,15h00,pluie_legere
+1,2,1,5,F,J,I,thomisidae,Thomisus,Na,espèce : onustus / citrinellus,46146,15h00,pluie_legere
+1,2,1,6,M,Na,I,araneidae,Mangora,Mangora acalypha,Na,46146,15h00,pluie_legere
+1,2,1,7,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,15h00,pluie_legere
+1,2,1,8,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,15h00,pluie_legere
+1,2,1,9,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,15h00,pluie_legere
+1,2,1,10,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,15h00,pluie_legere
+1,2,1,11,F,J,I,thomisidae,Na,Na,Na,46146,15h00,pluie_legere
+1,2,1,12,F,A,I,salticidae,Evarcha,Na,Na,46146,15h00,pluie_legere
+1,2,1,13,F,J,I,salticidae,Evarcha,Na,Na,46146,15h00,pluie_legere
+1,2,1,14,F,J,I,salticidae,Saitis,Saitis barbipes,Na,46146,15h00,pluie_legere
+1,2,1,15,M,A,I,miturgidae,Zora,Na,Na,46146,15h00,pluie_legere
+1,2,1,16,F,A,I,theridiidae,Na,Na,Na,46146,15h00,pluie_legere
+1,2,1,17,M,J,I,araneidae,Mangora,Mangora acalypha,Na,46146,15h00,pluie_legere
+1,2,1,18,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,15h00,pluie_legere
+1,2,1,19,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,15h00,pluie_legere
+1,2,1,20,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,15h00,pluie_legere
+1,2,1,21,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,15h00,pluie_legere
+9,1,1,1,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,16h30,nuageux
+9,1,1,2,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,16h30,nuageux
+9,1,1,3,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,16h30,nuageux
+9,1,1,4,M,J,I,salticidae,Evarcha,Na,Na,46146,16h30,nuageux
+9,1,1,5,F,A,I,linyphiidae,Na,Na,Na,46146,16h30,nuageux
+9,1,1,6,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,16h30,nuageux
+9,1,1,7,F,A,I,theridiidae,Theridion,Na,Na,46146,16h30,nuageux
+9,1,1,8,F,A,I,gnaphosidae,Drassodes,Na,Na,46146,16h30,nuageux
+9,1,1,9,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,16h30,nuageux
+9,1,1,10,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,16h30,nuageux
+9,1,1,11,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,16h30,nuageux
+9,1,1,12,F,A,I,lycosidae,Alopecosa,Alopecosa cuneata,espece_pas_sur,46146,16h30,nuageux
+9,1,1,13,F,A,I,lycosidae,Alopecosa,Alopecosa cuneata,espece_pas_sur,46146,16h30,nuageux
+9,1,1,14,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,16h30,nuageux
+9,1,1,15,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,16h30,nuageux
+9,1,1,16,M,A,I,miturgidae,Zora,Na,Na,46146,16h30,nuageux
+9,1,1,17,M,A,I,miturgidae,Zora,Na,Na,46146,16h30,nuageux
+9,1,1,18,F,A,I,salticidae,Evarcha,Na,Na,46146,16h30,nuageux
+9,1,1,19,F,A,I,oxyopidae,Oxyopes,Na,Na,46146,16h30,nuageux
+9,1,1,20,F,A,I,theridiidae,Na,Na,Na,46146,16h30,nuageux
+9,1,1,21,F,A,I,salticidae,Evarcha,Na,Na,46146,16h30,nuageux
+9,1,1,22,M,A,I,salticidae,Evarcha,Na,Na,46146,16h30,nuageux
+9,1,1,23,M,J,I,salticidae,Evarcha,Na,genre_pas_sur,46146,16h30,nuageux
+9,1,1,24,F,A,I,theridiidae,Robertus,Robertus lividus,Na,46146,16h30,nuageux
+9,2,1,1,F,J,I,gnaphosidae,Na,Na,Na,46146,18h00,nuageux
+9,2,1,2,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,2,1,3,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,2,1,4,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,2,1,5,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,2,1,6,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,18h00,nuageux
+9,2,1,7,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,2,1,8,F,A,I,lycosidae,Pardosa,Na,Na,46146,18h00,nuageux
+9,2,1,9,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,18h00,nuageux
+9,2,1,10,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,2,1,11,F,A,I,theridiidae,Na,Na,Na,46146,18h00,nuageux
+9,2,1,12,F,A,I,lycosidae,Pardosa,Na,Na,46146,18h00,nuageux
+9,2,1,13,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,2,1,14,F,A,I,miturgidae,Zora,Na,Na,46146,18h00,nuageux
+9,2,1,15,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,2,1,16,F,A,I,theridiosomatidae,Theridiosoma,Theridiosoma gemmosum,Na,46146,18h00,nuageux
+9,2,1,17,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,2,1,18,F,A,I,linyphiidae,Na,Na,Na,46146,18h00,nuageux
+1,2,2,1,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,10h15,pluie_forte
+1,2,2,2,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h15,pluie_forte
+1,2,2,3,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h15,pluie_forte
+1,2,2,4,M,A,I,gnaphosidae,Zelotes,Na,Na,46147,10h15,pluie_forte
+1,2,2,5,F,A,I,gnaphosidae,Drassodes,Na,Na,46147,10h15,pluie_forte
+1,2,2,6,F,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h15,pluie_forte
+1,2,2,7,Na,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,10h15,pluie_forte
+1,2,2,8,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h15,pluie_forte
+1,2,2,9,F,A,I,salticidae,Evarcha,Na,Na,46147,10h15,pluie_forte
+1,2,2,10,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46147,10h15,pluie_forte
+1,2,2,11,F,J,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h15,pluie_forte
+1,2,2,12,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h15,pluie_forte
+1,2,2,13,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,10h15,pluie_forte
+1,2,2,14,M,A,I,thomisidae,Xysticus,Na,Na,46147,10h15,pluie_forte
+1,2,2,15,M,A,I,linyphiidae,Na,Na,Na,46147,10h15,pluie_forte
+1,2,2,16,F,A,I,theridiidae,Robertus,Robertus lividus,Na,46147,10h15,pluie_forte
+9,1,3,1,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+9,1,3,2,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+9,1,3,3,F,J,I,lycosidae,Pardosa,Na,Na,46148,09h30,pluie_legere
+9,1,3,4,M,J,I,gnaphosidae,Drassodes,Na,Na,46148,09h30,pluie_legere
+9,1,3,5,F,J,I,lycosidae,Trochosa,Na,Na,46148,09h30,pluie_legere
+9,1,3,6,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+9,1,3,7,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,09h30,pluie_legere
+9,1,3,8,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,09h30,pluie_legere
+9,1,3,9,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+9,1,3,10,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,09h30,pluie_legere
+9,1,3,11,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+9,1,3,12,F,J,I,lycosidae,Na,Na,Na,46148,09h30,pluie_legere
+9,1,3,13,F,A,I,theridiidae,Theridion,Na,Na,46148,09h30,pluie_legere
+9,1,3,14,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,09h30,pluie_legere
+9,1,3,15,F,A,I,salticidae,Evarcha,Na,Na,46148,09h30,pluie_legere
+9,1,3,16,F,J,I,miturgidae,Zora,Na,Na,46148,09h30,pluie_legere
+9,1,3,17,F,A,I,gnaphosidae,Drassodes,Na,Na,46148,09h30,pluie_legere
+9,1,3,18,F,A,I,lycosidae,Pardosa,Na,Na,46148,09h30,pluie_legere
+9,1,3,19,F,J,I,gnaphosidae,Drassodes,Na,Na,46148,09h30,pluie_legere
+9,1,3,20,F,A,I,theridiidae,Theridion,Na,Na,46148,09h30,pluie_legere
+9,1,3,21,F,A,I,linyphiidae,Na,Na,Na,46148,09h30,pluie_legere
+9,1,3,22,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,09h30,pluie_legere
+9,1,3,23,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,09h30,pluie_legere
+9,1,3,24,F,J,I,lycosidae,Trochosa,Na,Na,46148,09h30,pluie_legere
+9,1,3,25,F,J,I,lycosidae,Trochosa,Na,Na,46148,09h30,pluie_legere
+9,3,3,1,F,A,I,theridiidae,Theridion,Na,Na,46148,10h30,nuageux
+9,3,3,2,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h30,nuageux
+9,3,3,3,F,A,I,linyphiidae,Na,Na,Na,46148,10h30,nuageux
+9,3,3,4,F,A,I,theridiidae,Theridion,Na,Na,46148,10h30,nuageux
+9,3,3,5,F,A,I,gnaphosidae,Zelotes,Na,Na,46148,10h30,nuageux
+9,3,3,6,F,J,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h30,nuageux
+9,3,3,7,F,A,I,theridiidae,Theridion,Na,Na,46148,10h30,nuageux
+9,3,3,8,F,A,I,miturgidae,Zora,Na,Na,46148,10h30,nuageux
+9,3,3,9,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h30,nuageux
+9,3,3,10,F,A,I,araneidae,Cercidia,Cercidia prominens,Na,46148,10h30,nuageux
+9,3,3,11,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+9,3,3,12,F,J,I,lycosidae,Na,Na,Na,46148,10h30,nuageux
+9,3,3,13,F,A,I,linyphiidae,Neriene,Na,espece_pas_sur_furtiva,46148,10h30,nuageux
+9,3,3,14,F,J,I,thomisidae,Ozyptila,Na,Na,46148,10h30,nuageux
+9,3,3,15,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h30,nuageux
+9,3,3,16,F,A,I,theridiidae,Theridion,Na,Na,46148,10h30,nuageux
+9,3,3,17,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h30,nuageux
+9,3,3,18,F,J,I,thomisidae,Ozyptila,Na,Na,46148,10h30,nuageux
+9,3,3,19,F,A,I,salticidae,Evarcha,Na,Na,46148,10h30,nuageux
+9,3,3,20,F,J,I,salticidae,Evarcha,Na,Na,46148,10h30,nuageux
+9,3,3,21,F,J,I,gnaphosidae,Drassodes,Na,Na,46148,10h30,nuageux
+9,3,3,22,Na,Na,I,theridiidae,Enoplognatha,Enoplognatha ovata,Na,46148,10h30,nuageux
+9,3,3,23,M,J,I,salticidae,Evarcha,Na,Na,46148,10h30,nuageux
+9,3,3,24,M,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h30,nuageux
+9,3,3,25,Na,J,C,atypidae,Atypus,Na,Na,46148,10h30,nuageux
+9,3,3,26,F,A,I,thomisidae,Xysticus,Xysticus erraticus,Na,46148,10h30,nuageux
+9,3,3,27,M,A,I,gnaphosidae,Drassodes,Na,Na,46148,10h30,nuageux
+9,3,3,28,F,J,I,theridiidae,Na,Na,Na,46148,10h30,nuageux
+1,1,3,1,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,09h30,pluie_legere
+1,1,3,2,F,J,I,gnaphosidae,Drassodes,Na,Na,46148,09h30,pluie_legere
+1,1,3,3,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,09h30,pluie_legere
+1,1,3,4,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+1,1,3,5,F,A,I,theridiidae,Theridion,Na,Na,46148,09h30,pluie_legere
+1,1,3,6,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,09h30,pluie_legere
+1,1,3,7,Na,Na,C,atypidae,Atypus,Na,Na,46148,09h30,pluie_legere
+1,1,3,8,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,09h30,pluie_legere
+1,1,3,9,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,09h30,pluie_legere
+1,1,3,10,F,J,I,lycosidae,Alopecosa,Na,Na,46148,09h30,pluie_legere
+1,1,3,11,M,A,I,thomisidae,Xysticus,Xysticus erraticus,Na,46148,09h30,pluie_legere
+1,1,3,12,M,A,I,gnaphosidae,Drassodes,Na,Na,46148,09h30,pluie_legere
+1,1,3,13,F,J,I,thomisidae,Ozyptila,Na,Na,46148,09h30,pluie_legere
+1,1,3,14,F,J,I,lycosidae,Pardosa,Na,Na,46148,09h30,pluie_legere
+1,1,3,15,F,J,I,lycosidae,Trochosa,Na,Na,46148,09h30,pluie_legere
+1,3,2,1,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,10h00,pluie
+1,3,2,2,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h00,pluie
+1,3,2,3,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h00,pluie
+1,3,2,4,F,J,I,salticidae,Evarcha,Na,Na,46147,10h00,pluie
+1,3,2,5,F,A,I,salticidae,Evarcha,Na,Na,46147,10h00,pluie
+1,3,2,6,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h00,pluie
+1,3,2,7,M,A,I,gnaphosidae,Zelotes,Na,Na,46147,10h00,pluie
+1,3,2,8,F,A,I,lycosidae,Alopecosa,Na,Na,46147,10h00,pluie
+1,3,2,9,M,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,10h00,pluie
+1,3,2,10,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h00,pluie
+1,3,2,11,F,J,I,thomisidae,Ozyptila,Na,Na,46147,10h00,pluie
+1,3,2,12,M,J,I,gnaphosidae,Drassodes,Na,Na,46147,10h00,pluie
+1,3,2,13,M,A,I,gnaphosidae,Drassodes,Na,Na,46147,10h00,pluie
+9,2,2,1,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,12h00,pluie_forte
+9,2,2,2,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,12h00,pluie_forte
+9,2,2,3,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,12h00,pluie_forte
+9,2,2,4,F,A,I,theridiidae,Theridion,Na,Na,46147,12h00,pluie_forte
+9,2,2,5,Na,A,I,lycosidae,Pardosa,Na,Na,46147,12h00,pluie_forte
+9,2,2,6,Na,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,12h00,pluie_forte
+9,2,2,7,M,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,12h00,pluie_forte
+9,2,2,8,F,A,I,lycosidae,Pardosa,Na,Na,46147,12h00,pluie_forte
+9,2,2,9,M,A,I,theridiidae,Neottiura,Neottiura uncina,Na,46147,12h00,pluie_forte
+9,2,2,10,M,A,I,araneidae,Mangora,Mangora acalypha,Na,46147,12h00,pluie_forte
+9,2,2,11,M,A,I,theridiidae,Neottiura,Neottiura uncina,Na,46147,12h00,pluie_forte
+9,2,2,12,M,A,I,theridiidae,Theridion,Na,Na,46147,12h00,pluie_forte
+9,2,2,13,M,A,I,gnaphosidae,Zelotes,Na,Na,46147,12h00,pluie_forte
+9,2,2,14,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,12h00,pluie_forte
+9,2,2,15,F,J,I,thomisidae,Ozyptila,Na,Na,46147,12h00,pluie_forte
+9,2,2,16,F,J,I,thomisidae,Ozyptila,Na,Na,46147,12h00,pluie_forte
+9,2,2,17,F,J,I,gnaphosidae,Drassodes,Na,Na,46147,12h00,pluie_forte
+9,2,2,18,M,J,I,lycosidae,Trochosa,Na,Na,46147,12h00,pluie_forte
+9,2,2,19,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,12h00,pluie_forte
+9,2,2,20,F,A,I,linyphiidae,Na,Na,Na,46147,12h00,pluie_forte
+9,2,2,21,F,A,I,salticidae,Evarcha,Na,Na,46147,12h00,pluie_forte
+9,2,2,22,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,12h00,pluie_forte
+1,2,3,1,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h00,pluie_legere
+1,2,3,2,F,A,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+1,2,3,3,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h00,pluie_legere
+1,2,3,4,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h00,pluie_legere
+1,2,3,5,F,A,I,theridiidae,Enoplognatha,Enoplognatha ovata,Na,46148,10h00,pluie_legere
+1,2,3,6,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h00,pluie_legere
+1,2,3,7,M,J,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+1,2,3,8,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h00,pluie_legere
+1,2,3,9,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h00,pluie_legere
+1,2,3,10,F,A,I,thomisidae,Xysticus,Na,Na,46148,10h00,pluie_legere
+1,2,3,11,F,A,I,salticidae,Evarcha,Na,Na,46148,10h00,pluie_legere
+1,2,3,12,F,A,I,lycosidae,Pardosa,Na,Na,46148,10h00,pluie_legere
+1,2,3,13,M,A,I,theridiidae,Robertus,Robertus lividus,Na,46148,10h00,pluie_legere
+1,2,3,14,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+1,2,3,15,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+1,2,3,16,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+1,2,3,17,F,A,I,gnaphosidae,Drassodes,Na,Na,46148,10h00,pluie_legere
+1,2,3,18,F,A,I,thomisidae,Thomisus,Thomisus onustus,Na,46148,10h00,pluie_legere
+1,2,3,19,M,A,I,salticidae,Heliophanus,Heliophanus cupreus,Na,46148,10h00,pluie_legere
+1,2,3,20,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46148,10h00,pluie_legere
+1,2,3,21,F,J,I,lycosidae,Pardosa,Na,Na,46148,10h00,pluie_legere
+1,1,2,1,Na,Na,I,theridiidae,Na,Na,non_capturé,46147,10h30,pluie_forte
+1,1,2,2,F,J,I,salticidae,Evarcha,Na,Na,46147,10h30,pluie_forte
+1,1,2,3,F,J,I,lycosidae,Pardosa,Na,aspect_juv_mais_cocon,46147,10h30,pluie_forte
+1,1,2,4,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,10h30,pluie_forte
+1,1,2,5,F,J,I,theridiidae,Theridion,Na,pas_sur_juv,46147,10h30,pluie_forte
+1,1,2,6,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h30,pluie_forte
+1,1,2,7,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,10h30,pluie_forte
+1,1,2,8,F,A,I,miturgidae,Zora,Na,Na,46147,10h30,pluie_forte
+1,1,2,9,F,A,I,miturgidae,Zora,Na,Na,46147,10h30,pluie_forte
+1,1,2,10,M,A,I,gnaphosidae,Zelotes,Na,pas_sur_stade,46147,10h30,pluie_forte
+1,1,2,11,M,A,I,thomisidae,Xysticus,Na,Na,46147,10h30,pluie_forte
+1,1,2,12,F,A,I,thomisidae,Ozyptila,Na,Na,46147,10h30,pluie_forte
+1,1,2,13,Na,Na,I,thomisidae,Na,Na,Na,46147,10h30,pluie_forte
+1,1,2,14,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,10h30,pluie_forte
+1,1,2,15,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,10h30,pluie_forte
+1,1,2,16,F,J,I,pisauridae,Pisaura,Pisaura mirabilis,pas_sur_stade,46147,10h30,pluie_forte
+1,1,2,17,F,A,I,salticidae,Evarcha,Na,Na,46147,10h30,pluie_forte
+1,1,2,18,F,A,I,thomisidae,Xysticus,Na,Na,46147,10h30,pluie_forte
+1,1,2,19,F,A,I,salticidae,Evarcha,Na,Na,46147,10h30,pluie_forte
+1,1,2,20,M,A,I,gnaphosidae,Drassodes,Na,Na,46147,10h30,pluie_forte
+1,1,2,21,F,A,C,lycosidae,Pardosa,Na,cocon,46147,10h30,pluie_forte
+9,1,2,1,F,J,I,lycosidae,Alopecosa,Na,vegetation_pietinee,46147,11h30,pluie
+9,1,2,2,F,A,I,theridiidae,Na,Na,vegetation_pietinee,46147,11h30,pluie
+9,1,2,3,F,J,I,lycosidae,Trochosa,Na,vegetation_pietinee,46147,11h30,pluie
+9,1,2,4,M,A,I,theridiidae,Neottiura,Neottiura uncinata,vegetation_pietinee,46147,11h30,pluie
+9,1,2,5,F,A,I,lycosidae,Aulonia,Aulonia albimana,vegetation_pietinee,46147,11h30,pluie
+9,1,2,6,F,A,I,gnaphosidae,Drassodes,Na,vegetation_pietinee,46147,11h30,pluie
+9,1,2,7,M,A,I,salticidae,Heliophanus,Na,vegetation_pietinee,46147,11h30,pluie
+9,3,2,1,F,J,I,gnaphosidae,Drassodes,Na,Na,46147,14h30,pluie
+9,3,2,2,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,14h30,pluie
+9,3,2,3,M,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,14h30,pluie
+9,3,2,4,M,J,I,miturgidae,Zora,Na,Na,46147,14h30,pluie
+9,3,2,5,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,14h30,pluie
+9,3,2,6,F,A,I,salticidae,Evarcha,Na,Na,46147,14h30,pluie
+9,3,2,7,F,A,I,theridiidae,Theridion,Na,Na,46147,14h30,pluie
+9,3,2,8,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,14h30,pluie
+9,3,2,9,F,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,14h30,pluie
+9,3,2,10,F,J,I,gnaphosidae,Drassodes,Na,Na,46147,14h30,pluie
+9,3,2,11,M,J,I,philodromidae,Tibellus,Tibellus oblongus,Na,46147,14h30,pluie
+9,3,2,12,F,J,I,thomisidae,Na,Na,Na,46147,14h30,pluie
+9,3,2,13,F,A,I,araneidae,Cercidia,Cercidia prominens,Na,46147,14h30,pluie
+9,3,2,14,F,A,I,salticidae,Evarcha,Na,Na,46147,14h30,pluie
+9,3,2,15,F,J,I,philodromidae,Drassodes,Tibellus oblongus,Na,46147,14h30,pluie
+9,3,2,16,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46147,14h30,pluie
+9,3,2,17,F,A,I,salticidae,Evarcha,Na,Na,46147,14h30,pluie
+9,3,2,18,M,A,I,gnaphosidae,Drassodes,Na,Na,46147,14h30,pluie
+9,3,2,19,F,A,I,theridiidae,Theridion,Na,Na,46147,14h30,pluie
+9,3,2,20,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,14h30,pluie
+9,3,2,21,F,J,I,thomisidae,Ozyptila,Na,Na,46147,14h30,pluie
+9,3,2,22,F,A,I,thomisidae,Ozyptila,Na,Na,46147,14h30,pluie
+9,3,2,23,F,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46147,14h30,pluie
+9,3,2,24,F,A,I,salticidae,Evarcha,Na,Na,46147,14h30,pluie
+9,3,2,25,F,A,I,gnaphosidae,Drassodes,Na,Na,46147,14h30,pluie
+9,3,2,26,F,A,I,miturgidae,Zora,Na,Na,46147,14h30,pluie
+9,3,2,27,F,A,I,phrurolithidae,Phrurolithis,Phrurolithis festivus,Na,46147,14h30,pluie
+9,3,2,28,M,J,I,gnaphosidae,Drassodes,Na,Na,46147,14h30,pluie
+9,3,2,29,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,14h30,pluie
+9,3,2,30,F,A,I,thomisidae,Xysticus,Na,Na,46147,14h30,pluie
+9,3,2,31,F,A,I,linyphiidae,Na,Na,Na,46147,14h30,pluie
+9,3,2,32,F,A,I,linyphiidae,Na,Na,Na,46147,14h30,pluie
+9,3,2,33,F,J,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,14h30,pluie
+9,3,2,34,F,J,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46147,14h30,pluie
+9,3,2,35,F,J,I,miturgidae,Zora,Na,Na,46147,14h30,pluie
+9,3,2,36,F,A,I,salticidae,Evarcha,Na,Na,46147,14h30,pluie
+9,3,1,1,F,A,I,lycosidae,Pardosa,Na,Na,46146,18h00,nuageux
+9,3,1,2,F,A,I,lycosidae,Pardosa,Na,Na,46146,18h00,nuageux
+9,3,1,3,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,3,1,4,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,18h00,nuageux
+9,3,1,5,F,A,I,lycosidae,Pardosa,Na,Na,46146,18h00,nuageux
+9,3,1,6,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,18h00,nuageux
+9,3,1,7,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,18h00,nuageux
+9,3,1,8,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,18h00,nuageux
+9,3,1,9,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,3,1,10,M,A,I,thomisidae,Thomisus,Thomisus onustus,Na,46146,18h00,nuageux
+9,3,1,11,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,3,1,12,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46146,18h00,nuageux
+9,3,1,13,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,18h00,nuageux
+9,3,1,14,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46146,18h00,nuageux
+9,3,1,15,F,A,I,miturgidae,Zora,Na,Na,46146,18h00,nuageux
+9,3,1,16,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46146,18h00,nuageux
+9,3,1,17,M,A,I,gnaphosidae,Drassodes,Na,Na,46146,18h00,nuageux
+9,3,1,18,M,A,I,gnaphosidae,Zelotes,Na,Na,46146,18h00,nuageux
+9,3,1,19,F,A,I,gnaphosidae,Zelotes,Na,Na,46146,18h00,nuageux
+9,3,1,20,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46146,18h00,nuageux
+9,3,1,21,F,A,I,salticidae,Evarcha,Na,Na,46146,18h00,nuageux
+9,3,1,22,F,A,I,linyphiidae,Na,Na,Na,46146,18h00,nuageux
+9,3,1,23,F,A,I,oxyopidae,Oxyopes,Na,Na,46146,18h00,nuageux
+9,3,1,24,F,A,I,salticidae,Evarcha,Na,Na,46146,18h00,nuageux
+9,3,1,25,M,A,I,salticidae,Evarcha,Na,Na,46146,18h00,nuageux
+9,3,1,26,F,A,I,salticidae,Evarcha,Na,Na,46146,18h00,nuageux
+9,3,1,27,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46146,18h00,nuageux
+9,3,1,28,F,A,I,gnaphosidae,Na,Na,Na,46146,18h00,nuageux
+9,3,1,29,F,J,I,thomisidae,Na,Na,Na,46146,18h00,nuageux
+9,3,1,30,F,J,I,gnaphosidae,Na,Na,Na,46146,18h00,nuageux
+9,2,3,1,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h00,pluie_legere
+9,2,3,2,F,A,I,lycosidae,Pardosa,Na,Na,46148,10h00,pluie_legere
+9,2,3,3,F,A,I,lycosidae,Pardosa,Na,Na,46148,10h00,pluie_legere
+9,2,3,4,M,A,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+9,2,3,5,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h00,pluie_legere
+9,2,3,6,F,A,I,salticidae,Evarcha,Na,Na,46148,10h00,pluie_legere
+9,2,3,7,F,A,I,gnaphosidae,Zelotes,Na,Na,46148,10h00,pluie_legere
+9,2,3,8,F,A,I,theridiidae,Theridion,Na,Na,46148,10h00,pluie_legere
+9,2,3,9,M,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h00,pluie_legere
+9,2,3,10,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h00,pluie_legere
+9,2,3,11,F,A,I,theridiidae,Theridion,Na,Na,46148,10h00,pluie_legere
+9,2,3,12,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+9,2,3,13,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h00,pluie_legere
+9,2,3,14,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h00,pluie_legere
+9,2,3,15,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+9,2,3,16,F,A,I,lycosidae,Na,Na,non_capturee,46148,10h00,pluie_legere
+9,2,3,17,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+9,2,3,18,F,J,I,uloboridae,Uloborus,Uloborus walckenaerius,Na,46148,10h00,pluie_legere
+9,2,3,19,M,J,I,uloboridae,Uloborus,Uloborus walckenaerius,Na,46148,10h00,pluie_legere
+9,2,3,20,F,J,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+9,2,3,21,F,A,I,thomisidae,Xysticus,Na,,46148,10h00,pluie_legere
+9,2,3,22,F,J,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+9,2,3,23,F,A,I,linyphiidae,Neriene,Na,espece : clathrata/furtiva,46148,10h00,pluie_legere
+9,2,3,24,F,A,I,linyphiidae,Neriene,Na,espece : clathrata/furtiva,46148,10h00,pluie_legere
+9,2,3,25,F,A,I,linyphiidae,Na,Na,Na,46148,10h00,pluie_legere
+9,2,3,26,F,A,I,linyphiidae,Neriene,Na,espece : clathrata/furtiva,46148,10h00,pluie_legere
+9,2,3,27,M,J,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h00,pluie_legere
+9,2,3,28,F,A,I,linyphiidae,Neriene,Na,espece : clathrata/furtiva,46148,10h00,pluie_legere
+9,2,3,29,M,J,I,miturgidae,Zora,Na,Na,46148,10h00,pluie_legere
+9,2,3,30,F,J,C,atypidae,Atypus,Na,mue,46148,10h00,pluie_legere
+9,2,3,31,M,J,I,lycosidae,Arctosa,Arctosa lutetiana,Na,46148,10h00,pluie_legere
+1,3,3,1,M,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h30,nuageux
+1,3,3,2,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,3,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,4,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h30,nuageux
+1,3,3,5,M,J,I,thomisidae,Thomisus,Thomisus onustus,Na,46148,10h30,nuageux
+1,3,3,6,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,7,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,8,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,9,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,10,Na,Na,T,atypidae,Atypus,Na,chaussette,46148,10h30,nuageux
+1,3,3,11,F,A,I,theridiidae,Enoplognatha,Enoplognatha ovata,Na,46148,10h30,nuageux
+1,3,3,12,M,J,I,miturgidae,Zora,Na,Na,46148,10h30,nuageux
+1,3,3,13,F,A,I,lycosidae,Pardosa,Na,Na,46148,10h30,nuageux
+1,3,3,14,F,A,I,lycosidae,Aulonia,Aulonia albimana,Na,46148,10h30,nuageux
+1,3,3,15,Na,A,I,Na,Na,Na,famille : theridiidae ou linyphiidae,46148,10h30,nuageux
+1,3,3,16,Na,Na,T,atypidae,Atypus,Na,chaussette,46148,10h30,nuageux
+1,3,3,17,F,A,I,pisauridae,Pisaura,Pisaura mirabilis,Na,46148,10h30,nuageux
+1,3,3,18,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,19,M,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,20,M,A,I,theridiidae,Neottiura,Neottiura uncinata,Na,46148,10h30,nuageux
+1,3,3,21,F,A,I,philodromidae,Tibellus,Tibellus oblongus,Na,46148,10h30,nuageux
+1,3,3,22,F,A,I,lycosidae,Na,Na,non_capturee,46148,10h30,nuageux
+1,3,3,23,F,A,I,araneidae,Mangora,Mangora acalypha,Na,46148,10h30,nuageux
+1,3,3,24,M,A,I,thomisidae,Xysticus,Na,Na,46148,10h30,nuageux
+1,3,3,25,F,A,I,lycosidae,Alopecosa,Alopecosa Alopecosa cuneata,Na,46148,10h30,nuageux
+1,3,3,26,M,A,I,gnaphosidae,Drassodes,Na,Na,46148,10h30,nuageux
+1,3,3,27,M,A,I,thomisidae,Xysticus,Xysticus erraticus,Na,46148,10h30,nuageux
+1,3,3,28,F,A,I,lycosidae,Pardosa,Na,Na,46148,10h30,nuageux
+1,3,3,29,F,J,I,lycosidae,Trochosa,Na,Na,46148,10h30,nuageux
