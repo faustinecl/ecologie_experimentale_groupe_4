@@ -9,7 +9,7 @@ Structure du Script :
 - Modèle de N-mixture
 - Courbe de saturation en genres (figure 3)
 - Indice de Shannon
-- test de Fisher global
+- test de Fisher d'indépendance entre genres et conditions
 - effectif des genres selon les conditions (figure 5)
 - tests de Wilcoxon pour chaque genre
 - sex-ratio général (figure 6)
