@@ -1,9 +1,6 @@
 df = read.csv( ‘emplacement/Data.csv, sep=‘,’)
 
-library(vegan)
 library(tidyverse)
-library(unmarked)
-library(AICcmodavg)
 
 ### Edition du tableau de données
 
