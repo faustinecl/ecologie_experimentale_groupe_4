@@ -1,4 +1,4 @@
-df = read.csv( ‘emplacement/ficher.csv, sep=‘,’)
+df = read.csv( ‘emplacement/Data.csv, sep=‘,’)
 
 library(dplyr)
 library(tidyr)
@@ -7,35 +7,157 @@ library(writexl)
 library(vegan)
 library(ggplot2)
 library(tidyverse)
+library(unmarked)
+
+### Edition du tableau de données
 
 df[df == "Na"] <- NA   # Que les “Na” du tableau Excel soient considérés comme des vrais NA sur R 
 
-unique(df$famille) #voir toutes les entrées dans la colonne famille, cad toutes les familles qu'on a répertoriées
-length(unique(df$famille)) # avoir le nombre total de famille qu'on a échantillonné
-unique(df$genre) #Pareil pour les genres
+### Description du tableau de données
+
+unique(df$famille)         # Voir toutes les entrées dans la colonne famille = toutes les familles qu'on a répertoriées
+length(unique(df$famille)) # Avoir le nombre total de famille qu'on a échantillonné
+unique(df$genre)           # Pareil pour les genres
 length(unique(df$genre))
-summary(df) # Résumé du tableau de données df
+summary(df)                # Résumé du tableau de données df
 
 ##########################################################################
-# Box pots des effectifs par parcelle selon les conditions (figure 2)
+# Box plots des effectifs par parcelle selon les conditions (figure 2)
 ##########################################################################
 
 ##########################################################################
 # Modèle de N-mixture
 ##########################################################################
 
+# ─────────────────────────────────────────────
+# 1. MATRICE DE CAPTURES
+# Lignes  = parcelles (3 blocs × 2 conditions = 6 parcelles)
+# Colonnes = passages (3 réplicats/jours)
+# ─────────────────────────────────────────────
+
+counts <- matrix(c(
+  18, 21, 15,   # condition 1, bloc 1
+  21, 16, 21,   # condition 1, bloc 2
+  24, 13, 29,   # condition 1, bloc 3
+  24,  7, 25,   # condition 9, bloc 1
+  18, 22, 31,   # condition 9, bloc 2
+  30, 36, 28    # condition 9, bloc 3
+), nrow = 6, byrow = TRUE)
+
+rownames(counts) <- c("C1_B1", "C1_B2", "C1_B3",
+                      "C9_B1", "C9_B2", "C9_B3")
+colnames(counts) <- c("Jour1", "Jour2", "Jour3")
+
+# ─────────────────────────────────────────────
+# 2. COVARIABLE DE PARCELLE (condition)
+# ─────────────────────────────────────────────
+
+site_covs <- data.frame(
+  condition = factor(c(1, 1, 1, 9, 9, 9))
+)
+
+# ─────────────────────────────────────────────
+# 3. CREATION DE L'OBJET UNMARKED
+# ─────────────────────────────────────────────
+
+umf <- unmarkedFramePCount(
+  y        = counts,
+  siteCovs = site_covs
+)
+
+summary(umf)
+
+# ─────────────────────────────────────────────
+# 4. MODELES N-MIXTURE
+# K = 3 × max observé = 108 (large marge)
+# ─────────────────────────────────────────────
+
+# Modèle nul : lambda et p constants
+mod0 <- pcount(~1 ~1, data = umf, K = 108)
+
+# Modèle avec lambda variant selon la condition
+mod1 <- pcount(~1 ~condition, data = umf, K = 108)
+
+# Modèle avec p variant selon la condition
+mod2 <- pcount(~condition ~1, data = umf, K = 108)
+
+# Modèle complet
+mod3 <- pcount(~condition ~condition, data = umf, K = 108)
+
+# ─────────────────────────────────────────────
+# 5. SELECTION DE MODELES PAR AIC
+# ─────────────────────────────────────────────
+
+library(AICcmodavg)
+models <- list(mod0, mod1, mod2, mod3)
+names(models) <- c("~1~1", "~1~condition", "~condition~1", "~condition~condition")
+aictab(models)
+
+# ─────────────────────────────────────────────
+# 6. RESULTATS DU MEILLEUR MODELE (ex: mod1)
+# ─────────────────────────────────────────────
+
+summary(mod1)
+
+# Lambda (abondance vraie estimée par parcelle)
+backTransform(mod1, type = "state")   # moyenne globale si mod0
+# sinon utiliser predict()
+
+# p (probabilité de détection par passage)
+backTransform(mod0, type = "det")     # p global
+
+# Prédictions par condition
+predict(mod1, type = "state", newdata = data.frame(condition = factor(c(1, 9))))
+
+# ─────────────────────────────────────────────
+# 7. ABONDANCE ESTIMEE PAR PARCELLE
+# ─────────────────────────────────────────────
+
+N_parcelles <- ranef(mod1)
+print(N_parcelles)
+plot(N_parcelles, layout = c(3, 2))  # 3 colonnes, 2 lignes
+
+# ─────────────────────────────────────────────
+# 8. COMPLETUDE D'ECHANTILLONNAGE
+# ─────────────────────────────────────────────
+
+p_est <- plogis(coef(mod0)["p(Int)"])  # probabilité de détection
+k     <- 3                              # nombre de passages
+
+completude <- 1 - (1 - p_est)^k
+cat("p estimé        :", round(p_est, 3), "\n")
+cat("Complétude (3 passages) :", round(completude * 100, 1), "%\n")
+
+# ─────────────────────────────────────────────
+# 9. VALIDATION DU MODELE
+# ─────────────────────────────────────────────
+
+gof <- Nmix.gof.test(mod1, nsim = 1000)
+print(gof)
+# p > 0.05 → modèle acceptable
+
+# Modèle avec effet de la condition sur l'abondance
+mod1 <- pcount(~1 ~condition, data = umf, K = 108)
+summary(mod1)
+
+# Le coefficient de "condition9" te dit directement
+# si l'abondance diffère significativement entre les conditions
+predict(mod1, type = "state",
+        newdata = data.frame(condition = factor(c(1, 9))))
+
+
 ##########################################################################
 # Courbe de saturation en genres (figure 3)
 ##########################################################################
 
-#En x, nombre de sites échantillonnés (effort d’échantillonnage)
-#en y, nombre de genres
-#Plus on a de sites échantillonés, plus on a de genres ou d’espèces, jusqu'à arriver à saturation car on a un nombre fini de genres/espèces par parcelle. On regarde les genres car on a trop de NA pour les espèces qu’on n’a pas réussi à identifier. 
+# Plus on a de sites échantillonés, plus on a de genres ou d’espèces, 
+# jusqu'à arriver à saturation car on a un nombre fini de genres/espèces par parcelle. 
+# On regarde les genres car on a trop de NA pour les espèces qu’on n’a pas réussi à identifier. 
 
-#Créer un tableau df_genre avec en colonne les différents genres et en ligne les conditions échantillons (parcelle)
-#Un tableau pour la condition 1 et un pour la 9. Chaque tableau doit avoir 9 lignes (nombre de parcelles)
+## Créer un tableau "df_genre" avec en colonne les différents genres et en ligne les numéros de parcelle. 
+# Puis séparer df_genre en 2 tableaux : un tableau pour la condition 1 et un pour la 9. Chaque tableau doit avoir 9 lignes (nombre de parcelles).
 
-
+# Création du tableau df_genre
 # ============================================================
 # Logique :
 # - réplicat = (n_bloc - 1) * 3 + n_repl
@@ -67,20 +189,21 @@ arrange(Condition, réplicat) %>%
 relocate(Condition, .after = last_col())
 
 
-#Création du tableau df_genre1 avec que les conditions 1, puis j'enlève la colonne condition pour qu'elle compte pas comme une espèce
-
-
+# Création du tableau df_genre1 avec que les conditions 1, puis suppression de la colonne condition pour qu'elle ne compte pas comme une espèce :
 
 df_genre1 <- df_genre %>%
   filter(Condition == 1) %>%
   select(-Condition)
+
+# Création du tableau df_genre9 avec que les conditions 9, puis suppression de la colonne condition pour qu'elle ne compte pas comme une espèce :
 
 df_genre9<- df_genre %>%
   filter(Condition == 9) %>%
   select(-Condition)
 print(df_genre9)
 
-# courbe d'accumulation de genres
+# Courbe d'accumulation de genres :
+
 courbe1 <- specaccum(df_genre1, method = "random", permutations = 1000)
 courbe9 <- specaccum(df_genre9, method = "random", permutations = 1000)
 
@@ -108,13 +231,13 @@ legend("bottomright",
        bty = "n")
 
 
-#Estimer/extrapoler le nombre maximum de genres qu'on aurait pu échantillonner
-#Selon différentes méthodes
+# Extrapoler le nombre maximum de genres qu'on aurait pu échantillonner pour chaque condition
+# Selon différents estimateurs (chao, jack1, jack2, boot)
 
 specpool(df_genre1)
 specpool(df_genre9)
 
-#Courbes extrapolées d'accumulation des genres : une courbe par méthode
+# Courbes extrapolées d'accumulation des genres : une courbe par estimateur
 
 pool1 <- poolaccum(df_genre1)
 pool9 <- poolaccum(df_genre9)
