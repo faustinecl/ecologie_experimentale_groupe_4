@@ -16,7 +16,18 @@ unique(df$genre) #Pareil pour les genres
 length(unique(df$genre))
 summary(df) # Résumé du tableau de données df
 
-#Courbe de saturation des espèces 
+##########################################################################
+# Box pots des effectifs par parcelle selon les conditions (figure 2)
+##########################################################################
+
+##########################################################################
+# Modèle de N-mixture
+##########################################################################
+
+##########################################################################
+# Courbe de saturation en genres (figure 3)
+##########################################################################
+
 #En x, nombre de sites échantillonnés (effort d’échantillonnage)
 #en y, nombre de genres
 #Plus on a de sites échantillonés, plus on a de genres ou d’espèces, jusqu'à arriver à saturation car on a un nombre fini de genres/espèces par parcelle. On regarde les genres car on a trop de NA pour les espèces qu’on n’a pas réussi à identifier. 
@@ -69,7 +80,7 @@ df_genre9<- df_genre %>%
   select(-Condition)
 print(df_genre9)
 
-# courbe d'accumulation d'espèces
+# courbe d'accumulation de genres
 courbe1 <- specaccum(df_genre1, method = "random", permutations = 1000)
 courbe9 <- specaccum(df_genre9, method = "random", permutations = 1000)
 
@@ -111,6 +122,9 @@ pool9 <- poolaccum(df_genre9)
 plot(pool1)
 plot(pool9)
 
+##########################################################################
+# Indice de Shannon
+##########################################################################
 
 # ------------- Shannon total : -----------
 # abondance en prenant en compte toutes les parcelles contrôle ou herbivorie :
@@ -154,3 +168,37 @@ wilcox.test(x=df_shannon$`contrôle`,y=df_shannon$`sans herbivorie`,paired = FAL
 alternative="two.sided")
 Lmoy=c(mean(L_shannon[1:9]),mean(L_shannon[10:18])) # vecteur des moyennes contrôle et
 sans herbivorie
+
+##########################################################################
+# test de Fisher global
+##########################################################################
+
+##########################################################################
+# effectif des genres selon les conditions (figure 5)
+##########################################################################
+
+##########################################################################
+# tests de Wilcoxon pour chaque genre
+##########################################################################
+
+##########################################################################
+# sex-ratio général (figure 6)
+##########################################################################
+
+##########################################################################
+# sex-ratio par condition (figure 7)
+##########################################################################
+
+##########################################################################
+# comparaison des stades
+##########################################################################
+
+
+
+
+
+
+
+
+
+
