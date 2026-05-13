@@ -28,6 +28,22 @@ summary(df)                # Résumé du tableau de données df
 ##########################################################################
 # Box plots des effectifs par parcelle selon les conditions (figure 2)
 ##########################################################################
+# Effectifs totaux par condition x parcelle
+abondance_totale <- as.data.frame(table(df$condition, df$n_bloc, df$n_repl))
+colnames(abondance_totale) <- c("condition", "bloc", "jour", "n")
+
+# Boxplot pour visualiser
+ggplot(abondance_totale, aes(x = condition, y = n, fill = condition)) +
+  geom_boxplot() +
+  labs(title = "Abondance totale par condition", x = "Conditions", y = "Effectifs") +
+  scale_x_discrete(labels = c("1" = "Contrôle", "9" = "Protection herbivorie")) +
+  theme_minimal() +
+  theme(legend.position = "none")
+
+# t test avec vérification des conditions (shapiro) sur les effectifs moyens par parcelles en fonction de la condition
+shapiro.test(residuals(aov(n ~ condition, data = abondance_totale)))
+t.test(n ~ condition, data = abondance_totale)
+# Pas de différence d'abondance significative entre les conditions
 
 ##########################################################################
 # Modèle de N-mixture
@@ -299,39 +315,176 @@ Lmoy=c(mean(L_shannon[1:9]),mean(L_shannon[10:18])) # vecteur des moyennes contr
 sans herbivorie
 
 ##########################################################################
-# test de Fisher global
+# test de Fisher d'indépendance entre genre et condition
 ##########################################################################
+
+# Table de contingence genres x conditions
+tab_genre_condition <- table(df$genre, df$condition)
+
+# Test de Fisher avec simulation de Monte Carlo car pas condition d'application
+test_fisher <- fisher.test(tab_genre_condition, simulate.p.value = TRUE, B = 10000)
+# Extraire la p value, la statistique et n
+test_fisher$p.value
+test_fisher$statistic
+sum(tab_genre_condition)
+# Dépendance entre genre et condition
 
 ##########################################################################
 # effectif des genres selon les conditions (figure 5)
 ##########################################################################
+# Effectifs des genres par conditions
+effectifs_genre_cond <- as.data.frame(table(df$genre, df$condition))
+colnames(effectifs_genre_cond) <- c("genre", "condition", "n")
+
+# Nommer
+effectifs_genre_cond$condition <- factor(effectifs_genre_cond$condition,
+                                         levels = c("1", "9"),
+                                         labels = c("Contrôle", "Protection herbivorie"))
+
+# Ordonner par abondance totale décroissante
+effectifs_genre_cond$genre <- reorder(effectifs_genre_cond$genre, -effectifs_genre_cond$n, FUN = sum)
+
+# L'histogramme par effectifs
+ggplot(effectifs_genre_cond, aes(x = genre, y = n, fill = condition)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  geom_text(aes(label = n), position = position_dodge(width = 0.9), vjust = -0.5, size = 3) +
+  labs(title = "Effectifs des genres par condition", x = "Genres", y = "Effectifs", fill = "Conditions") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
 
 ##########################################################################
 # tests de Wilcoxon pour chaque genre
 ##########################################################################
+# Pour chaque genre, comparer le nombre moyen d'individu par parcelle entre les deux conditions
+# Effectifs par genre x condition x parcelle
+abondance_genre_cond_parc <- as.data.frame(table(df$genre, df$condition, df$n_bloc, df$n_repl))
+colnames(abondance_genre_cond_parc) <- c("genre", "condition", "bloc", "jour", "n")
+
+# Tests de Wilcoxon par genre (pas de t test car seulement 9 xi donc pas fiable de vérifier la normalité + beaucoup de genre à 0)
+resultats_test_genre <- data.frame(genre = character(), statistique = numeric(), n = numeric(), p_value = numeric())
+for (g in unique(abondance_genre_cond_parc$genre)) {
+  sous_df <- abondance_genre_cond_parc[abondance_genre_cond_parc$genre == g, ]
+  test <- wilcox.test(n ~ condition, data = sous_df)
+  resultats_test_genre <- rbind(resultats_test_genre, data.frame(
+    genre = g,
+    statistique = test$statistic,
+    n = nrow(sous_df),
+    p_value = test$p.value
+  ))
+}
+# Résultats
+resultats_test_genre
 
 ##########################################################################
 # sex-ratio général (figure 6)
 ##########################################################################
+# Effectifs mâles/femelles par parcelle
+effectifs_sexe_parc <- as.data.frame(table(df$sexe, df$condition, df$n_bloc, df$n_repl))
+colnames(effectifs_sexe_parc) <- c("sexe", "condition", "bloc", "jour", "n")
+
+# Boxplot
+ggplot(effectifs_sexe_parc, aes(x = sexe, y = n, fill = sexe)) +
+  geom_boxplot(outlier.shape = NA) +
+  labs(title = "Effectifs mâles/femelles par parcelle", x = "Sexe", y = "Effectifs") +
+  theme_minimal()
+
+# Restructurer en format large pour le test apparié
+effectifs_sexe_large <- spread(effectifs_sexe_parc, key = sexe, value = n)
+
+# Vérifier la normalité des différences
+shapiro.test(effectifs_sexe_large$F - effectifs_sexe_large$M)
+
+# Donc t test
+t.test(effectifs_sexe_large$F, effectifs_sexe_large$M, paired = TRUE)
+# n
+length(effectifs_sexe_large$F)
+# Différence significative
 
 ##########################################################################
 # sex-ratio par condition (figure 7)
 ##########################################################################
+# Effectifs sexe x condition
+effectifs_sexe_cond <- as.data.frame(table(df$sexe, df$condition))
+colnames(effectifs_sexe_cond) <- c("sexe", "condition", "n")
+
+# Nommer
+effectifs_sexe_cond$condition <- factor(effectifs_sexe_cond$condition,
+                                        levels = c("1", "9"),
+                                        labels = c("Contrôle", "Protection herbivorie"))
+
+# Calculer les proportions par condition
+effectifs_sexe_cond$prop <- ave(effectifs_sexe_cond$n, effectifs_sexe_cond$condition, FUN = function(x) x / sum(x))
+
+# Barplot
+ggplot(effectifs_sexe_cond, aes(x = condition, y = prop, fill = sexe)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(title = "Proportions mâles/femelles par condition", x = "Condition", y = "Proportion", fill = "Sexe") +
+  theme_minimal()
+
+# Tableau de contingence sexe x condition
+tab_sexe_cond <- table(df$sexe, df$condition)
+# Chi2 (conditions respectées)
+chisq.test(tab_sexe_cond)
+# n
+sum(tab_sexe_cond)
+# Indépendance entre sexe de l'individu et condition
 
 ##########################################################################
 # comparaison des stades générale (figure 8)
 ##########################################################################
+# Effectifs juvénile/adulte par parcelle
+effectifs_stade_parc <- as.data.frame(table(df$stade, df$condition, df$n_bloc, df$n_repl))
+colnames(effectifs_stade_parc) <- c("stade", "condition", "bloc", "jour", "n")
+
+# Proportion Juvénile et Adulte
+prop.table(tapply(effectifs_stade_parc$n, effectifs_stade_parc$stade, sum))
+
+# Boxplot
+ggplot(effectifs_stade_parc, aes(x = stade, y = n, fill = stade)) +
+  geom_boxplot(outlier.shape = NA) +
+  labs(title = "Effectifs juvéniles/adultes par parcelle", x = "Stade", y = "Effectifs") +
+  scale_x_discrete(labels = c("A" = "Adultes", "J" = "Juvéniles")) +
+  scale_fill_discrete(labels = c("A" = "Adultes", "J" = "Juvéniles")) +
+  theme_minimal()
+
+# Restructurer en format large pour le test apparié
+effectifs_stade_large <- spread(effectifs_stade_parc, key = stade, value = n)
+
+# Vérifier la normalité des différences
+shapiro.test(effectifs_stade_large$J - effectifs_stade_large$A)
+
+# Donc t-test
+t.test(effectifs_stade_large$J, effectifs_stade_large$A, paired = TRUE)
+# n
+length(effectifs_stade_large$J)
+# Différence significative
 
 ##########################################################################
 # comparaison des stades par condition (figure 9)
 ##########################################################################
+# Effectifs stade x condition
+effectifs_stade_cond <- as.data.frame(table(df$stade, df$condition))
+colnames(effectifs_stade_cond) <- c("stade", "condition", "n")
 
+# Nommer
+effectifs_stade_cond$condition <- factor(effectifs_stade_cond$condition,
+                                         levels = c("1", "9"),
+                                         labels = c("Contrôle", "Protection herbivorie"))
 
+# Calculer les proportions par condition
+effectifs_stade_cond$prop <- ave(effectifs_stade_cond$n, effectifs_stade_cond$condition, FUN = function(x) x / sum(x))
 
+# Barplot
+ggplot(effectifs_stade_cond, aes(x = condition, y = prop, fill = stade)) +
+  geom_bar(stat = "identity", position = "stack") +
+  labs(title = "Proportions juvéniles/adultes par condition", x = "Condition", y = "Proportion", fill = "Stade") +
+  scale_fill_discrete(labels = c("A" = "Adultes", "J" = "Juvéniles")) +
+  theme_minimal()
 
-
-
-
-
-
-
+# Tableau de contingence stade x condition
+tab_stade_cond <- table(df$stade, df$condition)
+# Chi2 (conditions respectées)
+chisq.test(tab_stade_cond)
+#n
+sum(tab_stade_cond)
+# Indépendance entre le stade de l'individu et condition
